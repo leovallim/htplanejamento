@@ -1,0 +1,17 @@
+@mixin screen($media){
+    @if $media == small{
+        @media only screen and (min-width:767px){
+            @content;
+        }
+    }
+    @else if $media == medium{
+        @media only screen and (min-width:992px){
+            @content;
+        }
+    }
+    @else if $media == large{
+        @media only screen and (min-width:1200px){
+            @content;
+        }
+    }
+}

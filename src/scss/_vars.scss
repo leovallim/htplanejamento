@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//General
+$container-size : 1200px;
+$transition : ease-in 0.3s;
+$radius : 15px;
+$genera-shadown : 0 10px 20px rgba(0,0,0,.15);
+
+// Colors
+
+$color-primary : #01B7B1;
+$color-secoundary : #999999;
+
+//Fonts
+
+$font : 'Poppins', sans-serif;
+$font-size-text : 1rem;
+$text-padding:15px;
+$text-spacing : 1.25px;
+$text-line-height : 1.35rem;
+$text-color : #1b1b1b;
+
+//Headings
+$title-color : $color-primary;
+$title-padding : 35px;
+$font-size-h1 : 2srem;
+$font-size-h2 : 1.5rem;
+$font-size-h3 : 1.17rem;
+$font-size-h4 : 1rem;
+$font-size-h5 : 0.83rem;
+$font-size-h6 : 0.75rem;
+
+//Buttons
+
+$button-color-bg : $color-primary;
+$button-color-bg-hover : #CDD322;
+$button-color-dark-bg : #ffffff;
+$button-color-dark-bg-hover : #eaeaea;
+$button-color-text : #ffffff;
+$button-color-dark-text : $color-primary;
+$button-shadown: 0px 5px 10px rgba(0,0,0,0.1);
+$button-padding: 15px 25px;
+$button-radius : 5px;
+$button-font-size : 1rem;
+$button-icon-size : 1.15rem;
+
+//Header
+
+$header-bg : #fafafa;
+$header-height: 80px;
+$header-shadown: 0px 5px 10px rgba(0,0,0,0.05);
+$header-text : #1b1b1b;
+$header-content-bg : #ffffff;
+$header-content-bg-shadown : 0 5px 10px rgba(0, 0, 0, .05);
+$header-control-color : $color-primary;
+$header-control-color-hover : #CDD322;
+$header-control-color-close : $color-primary;
+$header-cta-bg : $color-primary;
+$header-cta-text : #ffffff;
+$header-cta-bg-hover : #CDD322;
+$header-nav-text : $color-primary;
+$header-social-color : $color-primary;
+
+//Services
+$services-bg: $color-primary;
+$services-title-color : #ffffff;
+$services-content-color : #ffffff;
+$services-item-bg : #ffffff;
+$services-item-title-color : $color-primary;
+$services-item-text-color : $text-color;
+$service-item-radius : 15px ;
+$service-item-shadown : 0 10px 20px rgba(0,0,0,0.15);
+
+//Contact and map
+$contact-bg : $color-primary;
+$contact-text-color : #ffffff;
+
+//Testimonial
+$testimonial-bg : #def8f7;
+$testimonial-text-color : #1b1b1b;
+$testimonial-name-color : #1b1b1b;
+$testimonial-nav-color: $color-primary;
+
+//Footer
+$footer-nav-color: $color-primary;
+$footer-info-color: #1b1b1b;
+$footer-social-bg: $color-primary;
+$footer-social-text: #ffffff;
+$footer-dev-color: #1b1b1b;

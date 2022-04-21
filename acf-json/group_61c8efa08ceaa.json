@@ -1,0 +1,129 @@
+{
+    "key": "group_61c8efa08ceaa",
+    "title": "Navegação",
+    "fields": [
+        {
+            "key": "field_61c8efb867ad9",
+            "label": "Principal",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
+            "key": "field_61c8efc867ada",
+            "label": "Navegação",
+            "name": "ht_header_nav",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_61c8efe267adb",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Novo link",
+            "sub_fields": [
+                {
+                    "key": "field_61c8efe267adb",
+                    "label": "Link",
+                    "name": "ht_header_nav_item",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_61c8eff767adc",
+                    "label": "Sub-itens",
+                    "name": "ht_header_nav_dropdown",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "Novo sub-item",
+                    "sub_fields": [
+                        {
+                            "key": "field_61c8f02867add",
+                            "label": "Link",
+                            "name": "ht_header_nav_dropdown_item",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_61c8f054b9fea",
+            "label": "Chamada de ação",
+            "name": "ht_header_cta",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "ht_header_conf"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1648290706
+}

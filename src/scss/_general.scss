@@ -1,0 +1,100 @@
+/* General */
+body{
+    font-family: $font;
+    margin-top: $header-height;
+}
+
+img{
+    max-width:100%;
+    height: auto;
+}
+.wrapper{
+    width:100%;
+    display: flex;
+    justify-content: center;
+
+    &--box{
+        margin-top: 100px;
+    }
+}
+.container{
+    width:100%;
+    max-width:$container-size;
+    padding:100px 25px;
+    padding-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap:50px;
+    align-items: center;
+    justify-content: center;
+
+    &--box{
+        padding-bottom: 100px;
+    }
+    @include screen(medium){
+        gap:30px;
+    }
+}
+.column{
+    width:100%;
+    // position: relative;
+    @include screen(medium){
+        width:calc(50% - 15px);
+    }
+
+    &--first{
+        @include screen(medium){
+            order:1;
+        }
+    }
+
+    &--secound{
+        @include screen(medium){
+            order:2;
+        }
+    }
+}
+.title{
+    color: $color-primary;
+    width:100%;
+    display: block; 
+
+    &--center{
+        text-align: center;
+    }
+    &--dark{
+        color:#ffffff;
+    }
+}
+.button{
+    background-color: $button-color-bg;
+    box-shadow: $button-shadown;
+    padding: $button-padding;
+    border-radius: $button-radius;
+    transition: $transition;
+
+    color: $button-color-text;
+    font-size: $button-font-size;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover{
+        background-color: $button-color-bg-hover;
+    }
+
+    &--dark{
+        background-color: $button-color-dark-bg;
+
+        color: $button-color-dark-text;
+    }
+    &--dark:hover{
+        background-color: $button-color-dark-bg-hover;
+    }
+
+    i{
+        margin-right: 10px;
+        
+        font-size: $button-icon-size;
+    }
+}
+// #wpadminbar{ display: none !important; }

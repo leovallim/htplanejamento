@@ -1,0 +1,49 @@
+.testimonial{
+    width: 100%;
+    background-color: $testimonial-bg;
+
+    color: $testimonial-text-color;
+
+    &__title{
+        margin-bottom: 50px;
+    }
+
+    &__content{
+        margin-bottom: 25px;
+        width: 100%;
+
+        font-size: $font-size-text;
+        letter-spacing: $text-spacing;
+        line-height: $text-line-height;
+    }
+
+    &__info{
+        width:100%;
+        display: flex;
+        justify-content: flex-end;
+        
+        font-size: $font-size-text;
+        color: $testimonial-name-color;
+        font-weight: bold;
+    }
+
+    &__nav{
+        display: flex;
+        padding-top:15px;
+        justify-content: center;
+        gap:10px;
+        cursor: pointer;
+
+        color: $testimonial-nav-color;
+
+        &__item{
+            opacity: 0.5;
+            transition: $transition;
+
+            font-size: 2.5rem;
+        }
+        &__item:hover{
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+/*!
+Theme Name: HT Boilerplate
+Theme URI: https://htcomunicacao.com.br
+Author: vallim.dev
+Author URI: https://vallim.dev
+Description: Base para construção dos temas para a HT Comunicação
+Version: 4.0
+Requires at least: 5.0
+Tested up to: 5.9
+Requires PHP: 7.0
+Text Domain: htcomunicacao
+*/
+
+@import '_mixins'; 
+@import '_vars';
+@import '_default';
+@import '_general';
+@import '_titles';
+@import '_header';
+@import '_hero';
+@import '_content';
+@import '_gallery';
+@import '_services';
+@import '_video';
+@import '_map';
+@import '_testimonial';
+@import '_footer';

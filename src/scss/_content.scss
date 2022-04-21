@@ -1,0 +1,56 @@
+.content{
+    &__image{
+        position: relative;
+    
+        &__box{
+            width:100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: $radius;
+            box-shadow: $genera-shadown;
+        }
+    }
+
+    &__cta{
+        margin-top: 35px;
+        display: flex;
+    }
+
+    &__text{
+        p{
+            margin-bottom: $text-padding;
+            letter-spacing: $text-spacing;
+            line-height: $text-line-height;
+    
+            color: $text-color;
+            font-size: $font-size-text;
+        }
+        p:last-child{
+            margin-bottom: 0;
+        }
+        h1{
+            font-size: $font-size-h1;
+            margin-bottom: $title-padding;
+        }
+        h2{
+            font-size: $font-size-h2;
+            margin-bottom: $title-padding;
+        }
+        h3{
+            font-size: $font-size-h3;
+            margin-bottom: $title-padding;
+        }
+        h4{
+            font-size: $font-size-h4;
+            margin-bottom: $title-padding;
+        }
+        h5{
+            font-size: $font-size-h5;
+            margin-bottom: $title-padding;
+        }
+        h6{
+            font-size: $font-size-h6;
+            margin-bottom: $title-padding;
+        }
+    }
+}
