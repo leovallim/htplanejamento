@@ -541,6 +541,7 @@ function get_sazonal_info($p)
         {
             foreach($m['days'] as $j => $day){
                 $return['calendar'][$i]['days'][$j]['date'] = $day['date'];
+                $return['calendar'][$i]['days'][$j]['highlight'] = $day['highlight'];
                 $return['calendar'][$i]['dates'][(int)$last_day = explode("-", $day['date'])[2]] = true;
 
                 if(!empty($day['events']))

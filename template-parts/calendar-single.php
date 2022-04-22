@@ -33,7 +33,7 @@
                         <div class="calendar__item__dates">
                             <?php if(!empty($calendar['days'])): ?>
                                 <?php foreach($calendar['days'] as $day): ?>
-                                    <div class="calendar__item__dates__day">
+                                    <div class="calendar__item__dates__day<?php if(!empty($day['highlight'])) echo ' calendar__item__dates__day--highlight' ?>">
                                         <h3 class="calendar__item__dates__day__title">
                                             <?php 
                                                 $date = new DateTime($day['date']);
