@@ -97,4 +97,28 @@ img{
         font-size: $button-icon-size;
     }
 }
+.badge{
+    padding:5px;
+    margin-right: 5px;
+    background:#cccccc;
+    border-radius: 5px;
+
+    font-size: 0.45rem;
+    text-transform: uppercase;
+}
+.badge__success{
+    background-color: $color-success;
+
+    color: #ffffff;
+}
+.badge__warning{
+    background-color: $color-warning;
+
+    color: #ffffff;
+}
+.badge__danger{
+    background-color: $color-danger;
+
+    color: #ffffff;
+}
 // #wpadminbar{ display: none !important; }

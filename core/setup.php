@@ -53,3 +53,15 @@ function mind_defer_scripts( $tag, $handle, $src ) {
    * 
    */
   add_filter( 'show_admin_bar', '__return_false' );
+
+  /**
+   * 
+   * Garantindo que somente usuários logados acessaram as informações
+   * 
+   */
+
+add_action('template_redirect', function(){
+    if(!is_user_logged_in()){
+        exit(wp_redirect( wp_login_url( ) ));
+    }
+});

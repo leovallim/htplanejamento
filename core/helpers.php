@@ -577,7 +577,7 @@ function format_event($e){
             break;
         
         case 4:
-            return array('text' => 'Comercial', 'class' => 'badge__danger');
+            return array('text' => 'Comercial', 'class' => 'badge__success');
             break;
         
         default:
@@ -612,14 +612,11 @@ function get_event_badges($event){
  */
 function get_event_plans($plans){
     if(!empty($plans)){
-        $return = '<h3 class="calendar__item__day__plans__title">Planos de ação</h3>';
-        $return .= '<ul class="calendar__item__day__plans__list">';
+        $return .= '<ul class="calendar__item__dates__day__plans__list">';
         foreach($plans as $plan){
             // var_Dump($plan);
-            $return .= '<li class="calendar__item__plans__item">';
-                $return .= '<a href="'. get_permalink( $plan ) .'" class="calendar__item__plans__link">';
-                $return .= $plan->post_title;
-                $return .= '</a>';
+            $return .= '<li class="calendar__item__dates__day__plans__item">';
+                $return .= '<a href="'. get_permalink( $plan ) .'" class="calendar__item__dates__day__plans__link">Ações</a>';
             $return .= '</li>';
         }
         $return .= '</ul>';
@@ -635,7 +632,7 @@ function get_event_plans($plans){
  */
 function get_inline_calendar($last_day, $days = array()){
 
-    $return = '<ul class="calendar__inline__list">';
+    $return = '<ul class="calendar__item__inline__list">';
     $last_day = explode("-", $last_day);
 
     $week = [
@@ -652,14 +649,14 @@ function get_inline_calendar($last_day, $days = array()){
         $current_day = new DateTime($last_day[0] ."-". $last_day[1] ."-". $i);
 
         if(!empty($days[$i])){
-            $class = "calendar__inline__item__day--content";
+            $class = "calendar__item__inline__item__day--content";
         }else{
-            $class = "calendar__inline__item__day--no-content";
+            $class = "calendar__item__inline__item__day--no-content";
         }
 
-        $return .= "<li class=\"calendar__inline__item {$class}\">";
-            $return .= "<span class=\"calendar__inline__item__week\">". $week[$current_day->format('w')] ."</span>";
-            $return .= "<span class=\"calendar__inline__item__day\">{$i}</span>";
+        $return .= "<li class=\"calendar__item__inline__item {$class}\">";
+            $return .= "<span class=\"calendar__item__inline__item__week\">". $week[$current_day->format('w')] ."</span>";
+            $return .= "<span class=\"calendar__item__inline__item__day\">{$i}</span>";
         $return .="</li>";
     }
 
