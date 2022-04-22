@@ -1,4 +1,3 @@
 <?php 
-get_header();
-ht_content();
-get_footer();
+wp_redirect(get_field('current_sazonal', 'options'));
+exit();
