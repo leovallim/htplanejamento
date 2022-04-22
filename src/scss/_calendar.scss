@@ -10,8 +10,9 @@
         position: fixed;
         top: 0;
         left: 0;
-        border-top-right-radius: 25px;
-        border-bottom-right-radius: 25px;
+        background-image: url('dist/images/bg-main.jpg');
+        background-position: center;
+        background-size: cover;
         box-shadow: 0 5px 10px rgba(0,0,0,0.2);
         padding:25px;
         display: flex;
@@ -115,6 +116,19 @@
                 letter-spacing: 1px;
                 line-height: 20px;
             }
+
+            strong{
+                font-weight: bolder;
+            }
+
+            ul{
+                margin-left: 25px;
+                list-style: circle;
+
+                li{
+                    margin-bottom: 25px;
+                }
+            }
         }
 
         &__container{
@@ -194,7 +208,7 @@
                 &--highlight{
                     background-color: #ffeaa7;
                 }
-                
+
                 &__title{
                     margin-bottom: 10px;
 

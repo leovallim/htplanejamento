@@ -831,6 +831,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "plano_de_acao"
+            }
         ]
     ],
     "menu_order": 0,
@@ -851,5 +858,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1649884650
+    "modified": 1650651682
 }

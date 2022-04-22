@@ -113,6 +113,25 @@
                             "first_day": 0
                         },
                         {
+                            "key": "field_6262ec29f1319",
+                            "label": "Destacar?",
+                            "name": "highlight",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_6261b6206a469",
                             "label": "Eventos",
                             "name": "events",
@@ -239,5 +258,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1650637583
+    "modified": 1650650171
 }
