@@ -514,3 +514,156 @@ function ht_content(){
         ht_format_content($block, $i);
     }
 }
+
+/**
+ * 
+ * Planejamento
+ * 
+ * Pegando informações gerais
+ * 
+ */
+
+function get_sazonal_info($p)
+{
+    $mounths = get_field('mounths', $p);
+
+    if(empty($mounths)){
+        return null;
+    }
+
+    foreach($mounths as $i => $m)
+    {
+        $return['calendar'][$i]['mounth'] = $m['mounth'];
+        $return['calendar'][$i]['details'] = $m['details'];
+        $return['calendar'][$i]['last_day'] = $m['last_day'];
+
+        if(!empty($m['days']))
+        {
+            foreach($m['days'] as $j => $day){
+                $return['calendar'][$i]['days'][$j]['date'] = $day['date'];
+                $return['calendar'][$i]['dates'][(int)$last_day = explode("-", $day['date'])[2]] = true;
+
+                if(!empty($day['events']))
+                {
+                    foreach($day['events'] as $event){
+                        $return['calendar'][$i]['days'][$j]['events'][] = $event;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    return $return;
+}
+
+/**
+ * 
+ * Formatando badges dos eventos
+ * 
+ */
+function format_event($e){
+    switch ($e) {
+        case 1:
+            return 'Normal';
+            break;
+        
+        case 2:
+            return array('text' => 'Feriado', 'class' => 'badge__warning');
+            break;
+        
+        case 3:
+            return array('text' => 'Potencial', 'class' => 'badge__danger');
+            break;
+        
+        case 4:
+            return array('text' => 'Comercial', 'class' => 'badge__danger');
+            break;
+        
+        default:
+            return 'Normal';
+            break;
+    }
+}
+
+/**
+ * 
+ * Imprimindo as badges
+ * 
+ */
+function get_event_badges($event){
+    if(is_array($event)){
+        foreach($event as $e){
+            $badge = format_event($e);
+
+            if($badge != 'Normal'){
+                $return .= "<span class=\"badge {$badge['class']}\">{$badge['text']}</span>";
+            }
+        }
+    }
+
+    return $return;
+}
+
+/**
+ * 
+ * Retornando os planos de ação
+ * 
+ */
+function get_event_plans($plans){
+    if(!empty($plans)){
+        $return = '<h3 class="calendar__item__day__plans__title">Planos de ação</h3>';
+        $return .= '<ul class="calendar__item__day__plans__list">';
+        foreach($plans as $plan){
+            // var_Dump($plan);
+            $return .= '<li class="calendar__item__plans__item">';
+                $return .= '<a href="'. get_permalink( $plan ) .'" class="calendar__item__plans__link">';
+                $return .= $plan->post_title;
+                $return .= '</a>';
+            $return .= '</li>';
+        }
+        $return .= '</ul>';
+
+        return $return;
+    }
+}
+
+/**
+ * 
+ * Formatando calendário
+ * 
+ */
+function get_inline_calendar($last_day, $days = array()){
+
+    $return = '<ul class="calendar__inline__list">';
+    $last_day = explode("-", $last_day);
+
+    $week = [
+        "Dom",
+        "Seg",
+        "Ter",
+        "Qua",
+        "Qui",
+        "Sex",
+        "Sab",
+    ];
+    
+    for ($i=1; $i <= (int)$last_day[2] ; $i++) { 
+        $current_day = new DateTime($last_day[0] ."-". $last_day[1] ."-". $i);
+
+        if(!empty($days[$i])){
+            $class = "calendar__inline__item__day--content";
+        }else{
+            $class = "calendar__inline__item__day--no-content";
+        }
+
+        $return .= "<li class=\"calendar__inline__item {$class}\">";
+            $return .= "<span class=\"calendar__inline__item__week\">". $week[$current_day->format('w')] ."</span>";
+            $return .= "<span class=\"calendar__inline__item__day\">{$i}</span>";
+        $return .="</li>";
+    }
+
+    $return .= '</ul>';
+
+    return $return;
+}

@@ -46,3 +46,10 @@ function mind_defer_scripts( $tag, $handle, $src ) {
       return $tag;
   } 
   add_filter( 'script_loader_tag', 'mind_defer_scripts', 10, 3 );
+
+  /**
+   * 
+   * Escondendo a barra de admin
+   * 
+   */
+  add_filter( 'show_admin_bar', '__return_false' );

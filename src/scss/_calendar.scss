@@ -1,0 +1,53 @@
+.calendar{
+    display: flex;
+    flex-wrap: nowrap;
+    width:100%;
+    min-height: 100vh;
+    background-color: #e1d8d7;
+
+    &__sidebar{
+        background-color: $color-primary;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        padding:25px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        width:300px;
+        height: 100%;
+
+        color:#ffffff;
+
+        &__logo{
+            height: 50px;
+            width:auto;
+        }
+
+        &__contianer{
+            width:100%;
+            display: block;
+        }
+
+        &__title{
+            margin: 25px 0;
+            width:100%;
+
+            color: #ffffff;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            text-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+    }
+
+    &__main{
+        width:100%;
+        margin-left: 300px;
+        padding:25px;
+    }
+}

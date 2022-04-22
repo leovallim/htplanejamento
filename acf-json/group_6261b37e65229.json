@@ -1,0 +1,243 @@
+{
+    "key": "group_6261b37e65229",
+    "title": "Calendário sazonal",
+    "fields": [
+        {
+            "key": "field_6261b386c89cd",
+            "label": "Meses",
+            "name": "mounths",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_6261b398c89ce",
+            "min": 0,
+            "max": 12,
+            "layout": "block",
+            "button_label": "Novo mês",
+            "sub_fields": [
+                {
+                    "key": "field_6261b398c89ce",
+                    "label": "Nome do mês",
+                    "name": "mounth",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6262b8e9e82d7",
+                    "label": "Último dia do mês",
+                    "name": "last_day",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "d\/m\/Y",
+                    "return_format": "Y-m-d",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_6261b47bc89d1",
+                    "label": "Fique de olho",
+                    "name": "details",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_6261b3b2c89cf",
+                    "label": "Dias",
+                    "name": "days",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "field_6261b40dc89d0",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Novo dia",
+                    "sub_fields": [
+                        {
+                            "key": "field_6261b40dc89d0",
+                            "label": "Data",
+                            "name": "date",
+                            "type": "date_picker",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "d\/m\/Y",
+                            "return_format": "Y-m-d",
+                            "first_day": 0
+                        },
+                        {
+                            "key": "field_6261b6206a469",
+                            "label": "Eventos",
+                            "name": "events",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "field_6261b4a9c89d2",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Novo evento",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6261b4a9c89d2",
+                                    "label": "Evento",
+                                    "name": "event",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_6261b4b7c89d3",
+                                    "label": "Tipo de evento",
+                                    "name": "type",
+                                    "type": "checkbox",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "1": "Normal",
+                                        "2": "Feriado",
+                                        "3": "Potencial",
+                                        "4": "Comercial"
+                                    },
+                                    "allow_custom": 0,
+                                    "default_value": [
+                                        1
+                                    ],
+                                    "layout": "horizontal",
+                                    "toggle": 0,
+                                    "return_format": "value",
+                                    "save_custom": 0
+                                },
+                                {
+                                    "key": "field_6261b803aa8bd",
+                                    "label": "Plano de ação",
+                                    "name": "plans",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "plano_de_acao"
+                                    ],
+                                    "taxonomy": "",
+                                    "allow_null": 0,
+                                    "multiple": 1,
+                                    "return_format": "object",
+                                    "ui": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "sazonal"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1650637583
+}
