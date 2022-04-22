@@ -89,6 +89,8 @@ img{
     }
     &--dark:hover{
         background-color: $button-color-dark-bg-hover;
+
+        color: $color-primary;
     }
 
     i{
