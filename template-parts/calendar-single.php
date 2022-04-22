@@ -10,6 +10,9 @@
                             <a href="#calendario-<?= $i ?>"><?= $nav['mounth'] ?></a>
                         </li>
                     <?php endforeach; ?>
+                    <li class="calendar__sidebar__nav__item">
+                        <a href="<?= wp_logout_url() ?>" class="button button--dark"><i class="fa-solid fa-right-from-bracket"></i> Sair do sistema</a>
+                    </li>
                 </ul>
             </div>
         </aside>
