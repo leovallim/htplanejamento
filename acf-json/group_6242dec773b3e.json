@@ -41,7 +41,8 @@
                         "4": "Lista de serviços",
                         "5": "Vídeo",
                         "6": "Contato",
-                        "7": "Depoimentos"
+                        "7": "Depoimentos",
+                        "8": "Separador"
                     },
                     "default_value": false,
                     "allow_null": 0,
@@ -858,5 +859,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1650651682
+    "modified": 1650655352
 }

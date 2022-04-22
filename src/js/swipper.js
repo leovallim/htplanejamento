@@ -14,14 +14,8 @@ let swiper = new Swiper(".hero", {
 });
 
 let caroulsel = new Swiper('.content__image__box', {
-    loop : true,
     pagination: {
         el: ".swiper-pagination",
-    },
-    autoplay: {
-        delay: 4000,
-        pauseOnMouseEnter : true,
-        disableOnInteraction : false,
     },
 })
 

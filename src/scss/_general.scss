@@ -29,7 +29,7 @@ img{
     justify-content: center;
 
     &--box{
-        padding-bottom: 100px;
+        padding-bottom: 100px !important;
     }
     @include screen(medium){
         gap:30px;
@@ -120,5 +120,10 @@ img{
     background-color: $color-danger;
 
     color: #ffffff;
+}
+.separator{
+    display: block;
+    width:100%;
+    height: 100px;
 }
 // #wpadminbar{ display: none !important; }

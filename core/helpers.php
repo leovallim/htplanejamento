@@ -499,6 +499,9 @@ function ht_format_content($args, $index){
         case 7: 
             ht_format_testimonial($args, $index);
             break;
+        case 8: 
+            echo '<div class="separator">&nbsp;</div>';
+            break;
     }
 }
 /**
